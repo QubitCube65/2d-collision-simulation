@@ -26,9 +26,13 @@ public class PhysicsEngine {
         double width = 800;
         double height = 600;
 
-        if(b.x - b.radius < 0) { //left/right
+        if(b.x - b.radius < 0) { //left wall
             b.x = b.radius; //snap back inside
             b.vx = b.vx * -1; //reflect horizontal velocity
+        }
+        if(b.x + b.radius > width) { //right wall
+            b.x = width -b.radius;
+            b.vx = b.vx * -1;
         }
         if(b.y - b.radius < 0) { //up/down
             b.y = b.radius;

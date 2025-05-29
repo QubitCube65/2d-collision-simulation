@@ -7,6 +7,7 @@ public class Main {
         List<Ball> balls = new ArrayList<>();
         balls.add(new Ball(100, 100, 50, 30, 20, 1));
         balls.add(new Ball(300, 200, -40, -20, 30, 2));
+        balls.add(new Ball(500, 150, -30, -40, 50, 3));
 
         PhysicsEngine engine = new PhysicsEngine(balls);
         SimulationPanel panel = new SimulationPanel(balls);
