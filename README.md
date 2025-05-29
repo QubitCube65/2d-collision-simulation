@@ -1,6 +1,6 @@
 # 2d-collision-simulation
 
-A simple Java application that simulates 2D ball collisions with gravity, friction, and wall boundaries using Swing for visualization.
+A simple, non deterministic Java application that simulates 2D ball collisions with gravity, friction, and wall boundaries using Swing for visualization.
 
 ### Running the Simulation
 
