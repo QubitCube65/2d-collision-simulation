@@ -9,13 +9,14 @@ public class SimulationPanel extends JPanel{
         this.balls = balls;
         setPreferredSize(new Dimension(800,600));
         setBackground(Color.WHITE);
+        setDoubleBuffered(true);
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         for(Ball b : balls) {
-            g.setColor(Color.BLUE);
+            g.setColor(b.color);
             g.fillOval(
                     (int)(b.x - b.radius),
                     (int)(b.y - b.radius),
