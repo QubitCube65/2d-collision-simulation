@@ -36,5 +36,7 @@ public class Ball {
 
         x = x + vx * dt;
         y = y + vy * dt;
+
+
     }
 }

@@ -18,7 +18,7 @@ public class Main {
         frame.setVisible(true);
 
         javax.swing.Timer timer = new javax.swing.Timer(16, e -> {
-            engine.update(0.016);
+            engine.simulate(0.016);
             panel.repaint();
         });
         timer.start();
