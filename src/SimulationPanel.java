@@ -17,6 +17,11 @@ public class SimulationPanel extends JPanel{
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); //edge straightening
+
+        int groundHeight = 20;
+        g2d.setColor(new Color(200,200,200));
+        //g2d.fillRect(0, getHeight() - groundHeight, getWidth(), groundHeight);
+
         for(Ball b : balls) {
             g2d.setColor(b.color);
             g2d.fillOval(

@@ -18,8 +18,16 @@ public class Main {
         frame.pack();
         frame.setVisible(true);
 
+        final long[] lastTime = {System.nanoTime()}; //stores timestamp of previous frame
+
         javax.swing.Timer timer = new javax.swing.Timer(16, e -> {
-            engine.simulate(0.016);
+            long now = System.nanoTime();
+            double dt = (now - lastTime[0]) / 1_000_000_000.0; //real elapsed time in seconds
+            lastTime[0] = now;
+
+            dt = Math.min(dt, 0.05); //optional clamp to avoid large jumps
+
+            engine.simulate(dt); //optional good fixed value: 0.016 (60fps)
             panel.repaint();
         });
         timer.start();
