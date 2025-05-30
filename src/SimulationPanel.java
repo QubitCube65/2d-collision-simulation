@@ -24,6 +24,14 @@ public class SimulationPanel extends JPanel{
         g2d.setColor(new Color(200,200,200));
         // g2d.fillRect(0, getHeight() - groundHeight, getWidth(), groundHeight);
 
+        /*
+        GradientPaint bg = new GradientPaint( //uncomment for greyish background gradient
+                0, 0, new Color(230, 230, 230),
+                0, getHeight(), new Color(120, 120, 120)
+        );
+        g2d.setPaint(bg);
+        g2d.fillRect(0, 0, getWidth(), getHeight()); */
+
         for (Ball b : balls) {
             float centerX = (float) b.x;
             float centerY = (float) b.y;
@@ -49,7 +57,7 @@ public class SimulationPanel extends JPanel{
     }
 }
 
-/**
+/*
  * @Override
  *     protected void paintComponent(Graphics g) {
  *         super.paintComponent(g);
